@@ -14,28 +14,59 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="index.html"><img class="logo" src="assets/images/logo.png" alt="FishEye Photographer page"></a>
     </header>
+    <!--HEADER-->
+    <div class="photograph-header" aria-label="photographer information">
+      <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+    </div>
+
     <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+
+
+      <!--DROPDOWN-->      
+
+      <!--WORKS-->
+      <section class="photographer-works" aria-label="photographer works"></section>
+    
+      <!--BOX-->
+      <div class="box"  aria-label="photographer likes and price"></div>
+
+      <!--MODAL-->
+  
+      <div id="contact_modal">
+			  <div class="modal">
+				  <header>
+            <h2>Contactez-moi</h2>
+            <img src="assets/icons/close.svg" onclick="closeModal()" />
+          </header>
+				  <form
+					  class="contact-form"
+            name="form" 
+            id="form"
+            method="GET"
+            onsubmit="submitForm">                         
+              <label aria-label="Prénom" for="nom">Prénom</label>
+              <input id="prenom" type="text" name="prenom" aria-labelledby="Prénom">
+              <label aria-label="Nom" for="nom">Nom</label>
+              <input id="nom" type="text" name="nom" aria-labelledby="Nom">
+              <label aria-label="Email" for="email">Email</label>
+              <input id="email" type="email" name="email" aria-labelledby="Email">
+              <label aria-label="Votre message" for="message">Votre message</label>
+              <input id="message" type="text" name="message" aria-labelledby="Votre message">
+            <button class="contact-button">Envoyer</button>
+				  </form>
+        </div>
       </div>
-    </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
-        </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
+
+      <!--LIGHTBOX-->
+
+      <section id="works-lightbox" aria-hidden="true">
+        
+      </section>
+    </main>	
+    
     <script src="/scripts/utils/contactForm.js"></script>
+    <script type="module" src="/scripts/pages/index.js"></script>
   </body>
 </html>
