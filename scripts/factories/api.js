@@ -24,19 +24,5 @@ export default class Api {
         return photographers;
     
     }
-     displayData(photographers) {
-
-        const photographersSection = document.querySelector(".photographer_section");
-    
-        photographers.forEach((photographer) => {
-    
-            const photographerModel = new Photographer(photographer);
-    
-            const userCardDOM = photographerModel.getUserCardDOM();
-    
-            photographersSection.innerHTML += userCardDOM;
-    
-        });
-    
-    }
+     
 }
