@@ -34,7 +34,6 @@
       <div id="contact_modal">
 			  <div class="modal">
 				  <header>
-            <h2>Contactez-moi</h2>
             <img src="assets/icons/close.svg" onclick="closeModal()" />
           </header>
 				  <form
@@ -42,15 +41,16 @@
             name="form" 
             id="form"
             method="GET"
-            onsubmit="submitForm">                         
-              <label aria-label="Prénom" for="nom">Prénom</label>
-              <input id="prenom" type="text" name="prenom" aria-labelledby="Prénom">
-              <label aria-label="Nom" for="nom">Nom</label>
-              <input id="nom" type="text" name="nom" aria-labelledby="Nom">
-              <label aria-label="Email" for="email">Email</label>
-              <input id="email" type="email" name="email" aria-labelledby="Email">
-              <label aria-label="Votre message" for="message">Votre message</label>
-              <input id="message" type="text" name="message" aria-labelledby="Votre message">
+            onsubmit="submitForm"> 
+            <div id="contact-photographer"></div>                         
+            <label aria-label="Prénom" for="nom">Prénom</label>
+            <input id="prenom" type="text" name="prenom" aria-labelledby="Prénom">
+            <label aria-label="Nom" for="nom">Nom</label>
+            <input id="nom" type="text" name="nom" aria-labelledby="Nom">
+            <label aria-label="Email" for="email">Email</label>
+            <input id="email" type="email" name="email" aria-labelledby="Email">
+            <label aria-label="Votre message" for="message">Votre message</label>
+            <input id="message" type="text" name="message" aria-labelledby="Votre message">
             <button class="contact-button">Envoyer</button>
 				  </form>
         </div>

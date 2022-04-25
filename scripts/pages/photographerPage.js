@@ -8,6 +8,8 @@ fetch("../data/photographers.json")
         let photographerDetails = data.photographers.find(photographe => photographe.id == getId());
         let photographer = new Photographer(photographerDetails);
         photographer.displayHeader();
+        photographer.showDailyPrice();
+        photographer.showModalName();
     })
     function getId() {
         const urlParams = new URLSearchParams(window.location.search);

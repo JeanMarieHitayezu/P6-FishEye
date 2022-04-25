@@ -8,6 +8,7 @@ export default class Photographer {
         this.price = data.price;
         this.picture = `assets/photographers/photographers_ID_photos/${data.alt}`;
         this.media = [data.media];
+        this.photographerid = data.photographerid;
     }
     
     getUserCardDOM() {
@@ -40,5 +41,18 @@ export default class Photographer {
             </div>
             <img class="photograph-picture" src="../${this.picture}" alt="${this.name}"  aria-label="${this.name}">
             `;
+    }
+
+    showDailyPrice() {
+        document.getElementById("box").innerHTML = `
+        <span id="total-like"></span>
+        <em class="fas fa-heart"></em>
+        <span id="daily-price">${this.price}€/jour</span>`; 
+    }
+    showModalName() {
+        document.getElementById("contact-photographer").innerHTML = `
+        <p>Contactez-moi</p>
+        <p>${this.name}</p>
+        `;
     }
 }

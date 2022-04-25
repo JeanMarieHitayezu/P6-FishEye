@@ -150,6 +150,8 @@ form input {
 }
 
 #contact-photographer {
+    display: inline-block;
+    width: 80%;
     font-size: 3rem;
     margin-top: -6rem;
     line-height: 10%;
