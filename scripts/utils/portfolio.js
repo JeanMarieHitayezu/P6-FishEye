@@ -9,7 +9,7 @@ export default class Portfolio {
         this.totalLike = [];
         this.currentSlideIndex;
     }
-    build() {
+    render() {
         this.display();
         
     }
