@@ -11,7 +11,4 @@ export default class Media {
         this.template = null;
         this.liked = false;
     }
-    
-    
-    
 }

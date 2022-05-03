@@ -13,7 +13,8 @@ export default class Video extends Media {
         this.price = data.price;
         this.alt = data.alt
     }
-    built() {
+
+    buildPhotographer() {
         return `
         <div class="image-wrapper">
             <a class="image-link" href="#" date="${this.date}" price="${this.price}" photoid="${this.id}" title="${this.title}">
@@ -29,6 +30,17 @@ export default class Video extends Media {
                 </span>
             </div>
         </div>`;
+    }
+
+    retrieveLightbox() {
+        return `
+        <div id="lightbox">
+            <video width="80%" height="87%" controls id="lightbox-video" alt="${this.alt}">
+                <source src="assets/photographers/${this.photographerId}/${this.video}" type="video/mp4">
+            </video>
+            <p id="lightbox-description">${this.title}</p>
+        </div>
+        `;
     }
 
     

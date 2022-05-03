@@ -16,7 +16,7 @@ export default class Portfolio {
     display() {
         let html = " ";
         this.all.forEach(media => {
-            html += media.built();
+            html += media.buildPhotographer();
             document.getElementById("photographer-works").innerHTML = html;
         });
     }

@@ -12,10 +12,11 @@ fetch("../data/photographers.json")
         photographer.showDailyPrice();
         photographer.showModalName();
 
-        let portfolio = new Portfolio(photographerDetails);
         let medias = data.medias.filter(media => media.photographerId == getId());
-        portfolio.hydrate(medias);
-        portfolio.render();
+        let photoProfil = new Portfolio(photographerDetails);
+        photoProfil.hydrate(medias);
+        photoProfil.render();
+        
     })
     function getId() {
         const urlParams = new URLSearchParams(window.location.search);

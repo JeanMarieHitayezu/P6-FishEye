@@ -15,7 +15,8 @@ export default class Photo extends Media {
         this.alt = data.alt
     
     }
-    built() {
+
+    buildPhotographer() {
         return `
         <div class="image-wrapper">
             <a class="image-link" href="#" date="${this.date}" price="${this.price}" title="${this.title}" photoid="${this.id}" aria-label="${this.title} vue rapprochée">
@@ -30,6 +31,16 @@ export default class Photo extends Media {
             </div>
         </div>`;
     }
+
+    retrieveLightbox() {
+        return `
+        <div id="lightbox">
+            <img id="lightbox-image" class="photos" src="assets/photographers/${this.photographerId}/${this.image}" alt="${this.alt}" photoid="${this.id}" aria-label="${this.title}">
+            <p id="lightbox-description">${this.title}</p>
+        </div>
+        `;
+    }
+
     
     
 }
