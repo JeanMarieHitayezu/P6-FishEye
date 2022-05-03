@@ -46,7 +46,7 @@ export default class Photographer {
     showDailyPrice() {
         document.getElementById("box").innerHTML = `
         <span id="total-like"></span>
-        <em class="fas fa-heart"></em>
+        <span class="fas fa-heart"></span>
         <span id="daily-price">${this.price}€/jour</span>`; 
     }
     showModalName() {

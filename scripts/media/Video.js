@@ -13,8 +13,7 @@ export default class Video extends Media {
         this.price = data.price;
         this.alt = data.alt
     }
-
-    buildPhotographer() {
+    built() {
         return `
         <div class="image-wrapper">
             <a class="image-link" href="#" date="${this.date}" price="${this.price}" photoid="${this.id}" title="${this.title}">

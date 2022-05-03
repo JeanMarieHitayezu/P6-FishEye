@@ -41,8 +41,8 @@
             name="form" 
             id="form"
             method="GET"
-            onsubmit="submitForm"> 
-            <div id="contact-photographer"></div>                         
+            onsubmit="submitForm">
+            <div id="contact-photographer"></div>                       
             <label aria-label="Prénom" for="nom">Prénom</label>
             <input id="prenom" type="text" name="prenom" aria-labelledby="Prénom">
             <label aria-label="Nom" for="nom">Nom</label>
@@ -58,8 +58,11 @@
 
       <!--LIGHTBOX-->
 
-      <section id="works-lightbox" aria-hidden="true">
-        
+      <section id="lightbox-works" aria-hidden="true">
+          <div class="fas fa-times" id="close" aria-label="Fermer dialog"></div>
+          <div class="fas fa-chevron-left" id="previous" aria-label="Image précedente"></div>
+          <div class="fas fa-chevron-right" id="next" aria-label="Prochaine image"></div>
+          <div id="lightbox-body"></div>
       </section>
     </main>	
     
