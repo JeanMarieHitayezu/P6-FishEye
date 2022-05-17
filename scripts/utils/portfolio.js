@@ -6,7 +6,7 @@ export default class Portfolio {
 
     constructor() {
         this.all = [];
-        this.currentSlideIndex;
+        this.slideIndex;
     }
 
     render() {
@@ -17,7 +17,7 @@ export default class Portfolio {
     display() {
         let html = " ";
         this.all.forEach(media => {
-            html += media.built();
+            html += media.buildPhotographer();
         });
         document.getElementById("photographer-works").innerHTML = html;
     }
@@ -32,7 +32,7 @@ export default class Portfolio {
     
     showLightbox() {
         document.getElementById("lightbox-works").style.display = "block";
-        document.getElementById("lightbox-body").innerHTML = this.all[this.currentSlideIndex].retrieveLightbox();
+        document.getElementById("lightbox-body").innerHTML = this.all[this.slideIndex].retrieveLightbox();
         document.getElementById("lightbox-works").setAttribute("aria-hidden", "false");
     }
 
@@ -46,10 +46,10 @@ export default class Portfolio {
             this.closeLightbox();
         });
         document.getElementById("next").addEventListener("click", () => {
-            this.lightboxNext();
+            this.lightboxNextSlide();
         });
         document.getElementById("previous").addEventListener("click", () => {
-            this.lightboxPrevious();
+            this.lightboxPreviousSlide();
         });
         document.addEventListener("keydown", (e) => {
             let key = e.which;
@@ -57,10 +57,10 @@ export default class Portfolio {
                 this.closeLightbox();
             }
             if (key == "37") {
-                this.lightboxPrevious();
+                this.lightboxPreviousSlide();
             }
             if (key == "39") {
-                this.lightboxNext();
+                this.lightboxNextSlide();
             }
         });
     }    
@@ -70,7 +70,7 @@ export default class Portfolio {
             images.addEventListener("click", (e) => {
                 e.preventDefault();
                 let id = e.target.getAttribute("photoid");
-                this.currentSlideIndex = this.all.findIndex(media => media.id == id);
+                this.slideIndex = this.all.findIndex(media => media.id == id);
                 this.showLightbox();
             });
         });
@@ -81,21 +81,21 @@ export default class Portfolio {
         });
     }
 
-    lightboxNext() {
-        this.currentSlideIndex++;
-        if (this.currentSlideIndex == this.all.length) {
-            this.currentSlideIndex = 0;
+    lightboxNextSlide() {
+        this.slideIndex++;
+        if (this.slideIndex == this.all.length) {
+            this.slideIndex = 0;
         }
-        let id = this.all[this.currentSlideIndex].id;
+        let id = this.all[this.slideIndex].id;
         this.showLightbox(id);
     }
 
-    lightboxPrevious() {
-        this.currentSlideIndex--;
-        if (this.currentSlideIndex == -1) {
-            this.currentSlideIndex = this.all.length - 1;
+    lightboxPreviousSlide() {
+        this.slideIndex--;
+        if (this.slideIndex == -1) {
+            this.slideIndex = this.all.length - 1;
         }
-        let id = this.all[this.currentSlideIndex].id;
+        let id = this.all[this.slideIndex].id;
         this.showLightbox(id);
     }
 }
