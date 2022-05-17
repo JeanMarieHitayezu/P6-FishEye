@@ -7,11 +7,13 @@ export default class Portfolio {
     constructor() {
         this.all = [];
         this.slideIndex;
+        this.totalLike = [];
     }
 
     render() {
         this.display();
         this.openLightbox();
+        this.listenForLike();
     }
     
     display() {
@@ -97,5 +99,35 @@ export default class Portfolio {
         }
         let id = this.all[this.slideIndex].id;
         this.showLightbox(id);
+    }
+
+    listenForLike() {
+        document.querySelectorAll(".like").forEach(heart => {
+            heart.addEventListener("click", (e) => {
+                e.preventDefault();
+                let id = heart.getAttribute("data-id");
+                let media = this.all.find(media => media.id == id);
+                media.likeCount();
+                this.displayTotal();
+            });
+        });
+        this.updateLikes();
+    }
+
+    displayTotal() {
+        this.updateLikes();
+    }
+
+    updateLikes() {
+        let total = 0;
+        this.all.forEach(media => {
+            total += media.likes;
+        });
+        document.getElementById("total-like").innerHTML = total;
+    }
+
+    displayDropdown() {
+        this.openSort();
+        this.closeSort();
     }
 }

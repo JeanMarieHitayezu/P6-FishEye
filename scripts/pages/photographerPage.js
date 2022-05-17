@@ -3,10 +3,6 @@
 import Photographer from "../factories/photographer.js";
 import Portfolio from "../utils/portfolio.js";
 
-
-
-
-
 fetch("../data/photographers.json")
     .then(response => response.json())
     .then(data => {
