@@ -55,4 +55,38 @@ export default class Photographer {
         <p>${this.name}</p>
         `;
     }
+
+    displayDropdown() {
+        
+        document.getElementById("dropdown-wrapper").innerHTML = `
+        <p id="dropdown-text" aria-label="Trier par">Trier par</p>
+        <div class="dropdown" id="populaire">
+            <button class="dropbtn filter" role="button" aria-haspopup="listbox" aria-expanded="false" data-filter="populaire">Popularité</button>
+            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-down arrow-down"></a>
+            <div class="dropdown-content">
+                <button class="filter" role="listbox" data-filter="date">Date</button>
+                <button class="filter" role="listbox" data-filter="titre">Titre</button>
+            </div>
+            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-up arrow-up"></a>
+        </div>
+        <div class="dropdown" id="date">
+            <button class="dropbtn filter" role="button" data-filter="date">Date</button>
+            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-down arrow-down"></a>
+            <div class="dropdown-content">
+                <button class="filter" role="listbox" data-filter="populaire">Popularité</button>
+                <button class="filter" role="listbox" data-filter="titre">Titre</button>
+            </div>
+            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-up arrow-up"></a>
+        </div>
+        <div class="dropdown" id="titre">
+            <button class="dropbtn filter" role="listbox" data-filter="titre">Titre</button>
+            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-down arrow-down"></a>
+            <div class="dropdown-content">
+                <button class="filter" role="listbox" data-filter="date">Date</button>
+                <button class="filter" role="listbox" data-filter="populaire">Popularité</button>
+            </div>
+            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-up arrow-up"></a>
+        </div>
+        `
+    }
 }

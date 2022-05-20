@@ -14,6 +14,8 @@ export default class Portfolio {
         this.display();
         this.openLightbox();
         this.listenForLike();
+        this.displayDropdown();
+        this.listenForFilter();
     }
     
     display() {
@@ -130,4 +132,99 @@ export default class Portfolio {
         this.openSort();
         this.closeSort();
     }
+
+    displayDropdown() {
+        this.openSort();
+        this.closeSort();
+    }
+
+    changeDropdown(titre) {
+        document.getElementById("populaire").style.display = "none";
+        document.getElementById("titre").style.display = "none";
+        document.getElementById("date").style.display = "none";
+        document.getElementById(titre).style.display = "block";
+    }
+
+    filterForDate() {
+        this.all = this.all.sort(function(a, b) {
+            let dateA = a.date;
+            let dateB = b.date;
+            if (dateA > dateB) {
+                return 1;
+            }
+            if (dateA < dateB) {
+                 return -1;
+            } 
+        });
+    }
+
+    filterForPopularity() {
+        this.all = this.all.sort((a, b) => {
+            return b.likes - a.likes;
+        });
+    }
+
+    filterForTitle() {
+        this.all = this.all.sort(function(a, b) {
+            let titleA = a.title;
+            let titleB = b.title;
+            if (titleA < titleB) {
+                 return -1;
+            } 
+            if (titleA > titleB) {
+                return 1;
+            }
+        });
+    }
+
+    listenForFilter() {
+        document.querySelectorAll(".filter").forEach(filter => {
+            filter.addEventListener("click", () => {
+                let filtre = filter.getAttribute("data-filter");
+                if (filtre == "date") {
+                    this.filterForDate();
+                    this.changeDropdown("date");
+                } else if (filtre == "titre") {
+                    this.filterForTitle();
+                    this.changeDropdown("titre");
+                } else if (filtre == "populaire") {
+                    this.filterForPopularity();
+                    this.changeDropdown("populaire");
+                }
+                this.render();
+            });
+        });
+    }
+
+    openSort() {
+        document.querySelectorAll(".arrow-down").forEach(buttonDown => {
+            buttonDown.addEventListener("click", () => {
+                document.querySelectorAll(".dropdown-content").forEach(menu => {
+                    menu.style.display = "block";
+                    buttonDown.style.display = "none";
+                    document.querySelectorAll(".dropbtn").forEach(button => {
+                        button.focus();
+                    });
+                 });
+                 document.querySelectorAll(".arrow-up").forEach(buttonUp => {
+                    buttonUp.style.display = "block";
+                 });
+            });
+        });
+    }
+
+    closeSort() {
+        document.querySelectorAll(".arrow-up").forEach(buttonUp => {
+            buttonUp.addEventListener("click", () => {
+                document.querySelectorAll(".dropdown-content").forEach(menu => {
+                    menu.style.display = "none";
+                    buttonUp.style.display = "none";
+                });
+                document.querySelectorAll(".arrow-down").forEach(buttonDown => {
+                    buttonDown.style.display = "block";
+                });
+            });
+        });
+    }
+
 }

@@ -1,4 +1,3 @@
-//Mettre le code JavaScript lié à la page photographer.html
 
 import Photographer from "../factories/photographer.js";
 import Portfolio from "../utils/portfolio.js";
@@ -11,6 +10,7 @@ fetch("../data/photographers.json")
         photographer.displayHeader(); 
         photographer.showDailyPrice();
         photographer.showModalName();
+        photographer.displayDropdown();
         
         let medias = data.medias.filter(media => media.photographerId == getId());
         let photoProfil = new Portfolio(photographerDetails);
