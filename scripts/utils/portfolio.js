@@ -21,7 +21,7 @@ export default class Portfolio {
     display() {
         let html = " ";
         this.all.forEach(media => {
-            html += media.buildPhotographer();
+            html += media.built();
         });
         document.getElementById("photographer-works").innerHTML = html;
     }
@@ -50,10 +50,10 @@ export default class Portfolio {
             this.closeLightbox();
         });
         document.getElementById("next").addEventListener("click", () => {
-            this.lightboxNextSlide();
+            this.lightboxNext();
         });
         document.getElementById("previous").addEventListener("click", () => {
-            this.lightboxPreviousSlide();
+            this.lightboxPrevious();
         });
         document.addEventListener("keydown", (e) => {
             let key = e.which;
@@ -61,10 +61,10 @@ export default class Portfolio {
                 this.closeLightbox();
             }
             if (key == "37") {
-                this.lightboxPreviousSlide();
+                this.lightboxPrevious();
             }
             if (key == "39") {
-                this.lightboxNextSlide();
+                this.lightboxNext();
             }
         });
     }    
@@ -85,7 +85,7 @@ export default class Portfolio {
         });
     }
 
-    lightboxNextSlide() {
+    lightboxNext() {
         this.slideIndex++;
         if (this.slideIndex == this.all.length) {
             this.slideIndex = 0;
@@ -94,7 +94,7 @@ export default class Portfolio {
         this.showLightbox(id);
     }
 
-    lightboxPreviousSlide() {
+    lightboxPrevious() {
         this.slideIndex--;
         if (this.slideIndex == -1) {
             this.slideIndex = this.all.length - 1;
@@ -126,11 +126,6 @@ export default class Portfolio {
             total += media.likes;
         });
         document.getElementById("total-like").innerHTML = total;
-    }
-
-    displayDropdown() {
-        this.openSort();
-        this.closeSort();
     }
 
     displayDropdown() {
@@ -226,5 +221,4 @@ export default class Portfolio {
             });
         });
     }
-
 }

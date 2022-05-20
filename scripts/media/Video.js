@@ -13,16 +13,16 @@ export default class Video extends Media {
         this.price = data.price;
         this.alt = data.alt
     }
-    buildPhotographer() {
+    built() {
         return `
         <div class="image-wrapper">
-            <a class="image-link" href="#" date="${this.date}" price="${this.price}" photoid="${this.id}" title="${this.title}">
+            <a class="image-link" date="${this.date}" price="${this.price}" photoid="${this.id}" title="${this.title}">
                 <video width="350" height="350" poster class="image-link videos" alt="${this.alt}" photoid="${this.id}">
                     <source src="assets/photographers/${this.photographerId}/${this.video}" type="video/mp4">
                 </video>
             </a>
-            <div class="description-wrapper">
-                <p class="description">${this.title}</p>
+            <div class="description-wrapper" tabindex="0">
+                <p class="description" title="${this.title}">${this.alt}</p>
                 <span aria-label="Likes">
                     <span class="photographer-like" data-id="${this.id}">${this.likes}</span>
                     <a href="#" title="like" class="fas fa-heart like" data-id="${this.id}"></a>

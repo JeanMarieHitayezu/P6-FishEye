@@ -58,6 +58,11 @@ a {
     box-shadow: lightgrey 0px 0px 10px 3px;
 }
 
+.photographer-heading:hover, .photographer-heading:focus {
+    background-color: #D3573C;    
+    outline: 2px solid black;
+}
+
 .photographer-datas {
     font-size: 14px;
     justify-self: center;

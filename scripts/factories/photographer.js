@@ -14,10 +14,12 @@ export default class Photographer {
     getUserCardDOM() {
         
         return `
-        <article class="">
+        <article class="photographer-info">
             <a href="/photographer.html?id=${this.id}" aria-label="${this.name} - Fisheye">
-                <img class="user" src="./${this.picture}" alt="${this.name}" />
-                <h2 class="photographer_heading">${this.name}</h2>
+                <div class="photographer-heading" aria-label="photo du photographe et son nom">
+                    <img class="user" src="./${this.picture}" alt="${this.name}" />
+                    <h2 class="photographer_heading">${this.name}</h2>
+                </div>                
             </a>
             <div class="photographer-datas">
                 <p class="photographer-datas_location" lang="en">${this.location}</p> 
@@ -29,7 +31,7 @@ export default class Photographer {
     }
 
     displayHeader() {
-        
+
         document.getElementById("photograph-header").innerHTML = `
             <div>
                 <h1 class="photograph-name">${this.name}</h1>
@@ -39,22 +41,24 @@ export default class Photographer {
             <div>
                 <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
             </div>
-            <img class="photograph-picture" src="../${this.picture}" alt="${this.name}"  aria-label="${this.name}">
+            <img class="photograph-picture" src="../${this.picture}" alt=""  aria-label="${this.name}">
             `;
     }
 
     showDailyPrice() {
+
         document.getElementById("box").innerHTML = `
         <span id="total-like"></span>
         <span class="fas fa-heart"></span>
         <span id="daily-price">${this.price}€/jour</span>`; 
     }
     showModalName() {
+
         document.getElementById("contact-photographer").innerHTML = `
-        <p>Contactez-moi</p>
-        <p>${this.name}</p>
+        <h2>Contactez-moi</h2>
+        <h2>${this.name}</h2>
         `;
-    }
+    } 
 
     displayDropdown() {
         
@@ -89,4 +93,5 @@ export default class Photographer {
         </div>
         `
     }
+         
 }

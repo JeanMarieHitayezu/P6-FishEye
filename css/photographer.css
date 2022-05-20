@@ -26,6 +26,9 @@
     object-fit: cover;
 }
 
+.photograph-picture:hover, .photograph-picture:focus {
+    outline: 2px solid black;
+}
 .photograph-name {
     font-size: 45px;
     margin: 20px 0px;
@@ -192,8 +195,13 @@ form input {
     cursor: pointer;
 }
 
+.photographer-like {
+    font-weight: bold;
+    color: #901C1C;
+}
+
 .like {
-    color: #bbb;
+    color: #D3573C;
     font-size: 25px;
 }
 
@@ -204,27 +212,24 @@ form input {
     height: 50px;
     width: 350px;
     position: fixed;
-    bottom: -10px;
+    bottom: -20px;
     right: 25px;
     border-radius: 5px;
 }
 
-#box i {
+/*#like-wrapper span {
     font-size: 25px;
-    margin-left: 5px;
-}
-
-#like-wrapper span {
-    font-size: 25px;
-}
+}*/
 
 #total-like {
     margin-left: 10px;
+    font-weight: bold;
 }
 
 #daily-price {
     position: absolute;
     right: 10px;
+    font-weight: bold;
 }
 
 @keyframes modalopen {

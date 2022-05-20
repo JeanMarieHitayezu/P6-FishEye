@@ -13,7 +13,7 @@
     <title>Fisheye - photographe </title>
   </head>
   <body>
-    <header>
+    <header data-hidden-on-modal>
       <a href="index.html"><img class="logo" src="assets/images/logo.png" alt="FishEye Photographer page"></a>
     </header>
     <main id="main">
@@ -27,14 +27,14 @@
       <section id="photographer-works" aria-label="photographer works"></section>
 
       <!--BOX-->
-      <div id="box"  aria-label="photographer likes and price"></div>
+      <div id="box" aria-label="photographer likes and price" alt="photographer likes and daily price"></div>
 
       <!--MODAL-->
   
       <div id="contact_modal">
-			  <div class="modal">
+			  <div class="modal" aria-hidden="true">
 				  <header>
-            <img src="assets/icons/close.svg" onclick="closeModal()" />
+            <img src="assets/icons/close.svg" onclick="closeModal()" alt="close button"/>
           </header>
 				  <form
 					  class="contact-form"
@@ -43,14 +43,14 @@
             method="GET"
             onsubmit="submitForm">
             <div id="contact-photographer"></div>                       
-            <label aria-label="Prénom" for="nom">Prénom</label>
-            <input id="prenom" type="text" name="prenom" aria-labelledby="Prénom">
-            <label aria-label="Nom" for="nom">Nom</label>
-            <input id="nom" type="text" name="nom" aria-labelledby="Nom">
+            <label for="prenom">Prénom</label>
+            <input id="prenom" type="text" name="prenom">
+            <label for="nom">Nom</label>
+            <input id="nom" type="text" name="nom">
             <label aria-label="Email" for="email">Email</label>
-            <input id="email" type="email" name="email" aria-labelledby="Email">
+            <input id="email" type="email" name="email">
             <label aria-label="Votre message" for="message">Votre message</label>
-            <input id="message" type="text" name="message" aria-labelledby="Votre message">
+            <input id="message" type="text" name="message">
             <button class="contact-button">Envoyer</button>
 				  </form>
         </div>
@@ -58,7 +58,7 @@
 
       <!--LIGHTBOX-->
 
-      <section id="lightbox-works" aria-hidden="true">
+      <section id="lightbox-works" role="dialog" aria-label="image close up view" aria-hidden="true">
           <div class="fas fa-times" id="close" aria-label="Fermer dialog"></div>
           <div class="fas fa-chevron-left" id="previous" aria-label="Image précedente"></div>
           <div class="fas fa-chevron-right" id="next" aria-label="Prochaine image"></div>

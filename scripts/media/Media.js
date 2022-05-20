@@ -21,8 +21,9 @@ export default class Media {
             heart.style.color = "#901C1C";
         } else {
             this.likes--;
-            heart.style.color = "#bbb";
+            heart.style.color = "#D3573C";
         }
         count.innerHTML = this.likes;
     }
+    
 }
