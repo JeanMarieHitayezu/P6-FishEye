@@ -102,9 +102,8 @@
     z-index: 99;
 }
 
-.modal header {
-    justify-content: space-between;
-    width: 100%;
+.modal-header {
+    font-size: 30px;
 }
 
 .modal header img {

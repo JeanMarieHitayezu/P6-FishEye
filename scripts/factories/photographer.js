@@ -55,8 +55,10 @@ export default class Photographer {
     showModalName() {
 
         document.getElementById("contact-photographer").innerHTML = `
-        <h2>Contactez-moi</h2>
-        <h2>${this.name}</h2>
+        <div class="modal-header">
+            <h2 >Contactez-moi</h2>
+            <h2>${this.name}</h2>
+        </div>
         `;
     } 
 

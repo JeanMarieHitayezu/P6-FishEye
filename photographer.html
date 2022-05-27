@@ -14,7 +14,7 @@
   </head>
   <body>
     <header data-hidden-on-modal>
-      <a href="index.html"><img class="logo" src="assets/images/logo.png" alt="FishEye Photographer page"></a>
+      <a href="index.html"><img class="logo" src="assets/images/logo.png" alt="FishEye Homepage"></a>
     </header>
     <main id="main">
 
@@ -43,15 +43,15 @@
             method="GET"
             onsubmit="submitForm">
             <div id="contact-photographer"></div>                       
-            <label for="prenom">Prénom</label>
+            <label aria-label="Prenom du photographe" for="prenom" tabindex="0">Prénom</label>
             <input id="prenom" type="text" name="prenom">
-            <label for="nom">Nom</label>
-            <input id="nom" type="text" name="nom">
-            <label aria-label="Email" for="email">Email</label>
+            <label aria-label="Nom du photographe" for="nom" tabindex="0">Nom</label>
+            <input id="nom" type="text" name="nom"  >
+            <label aria-label="Votre Email attendu" for="email" tabindex="0">Email</label>
             <input id="email" type="email" name="email">
-            <label aria-label="Votre message" for="message">Votre message</label>
+            <label aria-label="Votre message attendu" for="message" tabindex="0">Votre message</label>
             <input id="message" type="text" name="message">
-            <button class="contact-button">Envoyer</button>
+            <button class="contact-button" aria-label="Envoyer le message">Envoyer</button>
 				  </form>
         </div>
       </div>
