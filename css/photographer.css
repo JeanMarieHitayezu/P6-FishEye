@@ -2,7 +2,7 @@
     display: none;
     position: fixed;
     top: 50px;
-    left: 40%;
+    left: 33%;
     width: 500px;
     animation-name: modalopen;
     animation-duration: 1s;
@@ -38,7 +38,7 @@
 }
 
 .photograph-location {
-    font-size: 20px;
+    font-size: 200px;
     margin: 5px;
     color: #901C1C;
 }
@@ -103,19 +103,24 @@
 }
 
 .modal-header {
-    font-size: 30px;
+    font-size: 20px;
 }
+
 
 .modal header img {
     cursor: pointer;
     margin-left: 450px;
 }
 
-.modal header h2 {
+.modal header img:hover, .modal header img:focus {
+    outline: thin dotted;
+}
+/*.modal header h2 {
     font-size: 64px;
     font-weight: normal;
     text-align: center;
-}
+    background-color: aqua;
+}*/
 
 form {
     display: flex;
@@ -209,7 +214,7 @@ form input {
     align-items: center;
     background-color: #DB8876;
     height: 50px;
-    width: 350px;
+    width: 200px;
     position: fixed;
     bottom: -20px;
     right: 25px;
@@ -446,3 +451,4 @@ form input {
     z-index: 3;
     display: none;
 }
+

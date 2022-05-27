@@ -34,14 +34,16 @@ export default class Photographer {
 
         document.getElementById("photograph-header").innerHTML = `
             <div>
-                <h1 class="photograph-name">${this.name}</h1>
-                <p class="photograph-location">${this.location}</p>
-                <p class="photograph-text">${this.tagline}</p>
+                <h1 tabindex="0" class="photograph-name">${this.name}</h1>
+                <div tabindex="0"class="photograher-laocation_slogan>
+                    <p class="photograph-location">${this.location}</p>
+                    <p class="photograph-text">${this.tagline}</p>
+                </div>
             </div>
             <div>
                 <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
             </div>
-            <img class="photograph-picture" src="../${this.picture}" alt=""  aria-label="${this.name}">
+            <img tabindex=0" class="photograph-picture" src="../${this.picture}" alt=""  aria-label="${this.name}">
             `;
     }
 
@@ -56,8 +58,8 @@ export default class Photographer {
 
         document.getElementById("contact-photographer").innerHTML = `
         <div class="modal-header">
-            <h2 >Contactez-moi</h2>
-            <h2>${this.name}</h2>
+            <h1 >Contactez-moi</h2>
+            <h1>${this.name}</h2>
         </div>
         `;
     } 
@@ -68,9 +70,9 @@ export default class Photographer {
         <p id="dropdown-text" aria-label="Trier par">Trier par</p>
         <div class="dropdown" id="populaire">
             <button class="dropbtn filter" role="button" aria-haspopup="listbox" aria-expanded="false" data-filter="populaire">Popularité</button>
-            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-down arrow-down"></a>
+            <a title="Dropdown Menu" href="#"  role="button" aria-haspopup="listbox" class="fas fa-chevron-down arrow-down"></a>
             <div class="dropdown-content">
-                <button class="filter" role="listbox" data-filter="date">Date</button>
+                <button class="filter" role="listbox"  aria-activedescendant="date" data-filter="date">Date</button>
                 <button class="filter" role="listbox" data-filter="titre">Titre</button>
             </div>
             <a title="Dropdown Menu" href="#"  class="fas fa-chevron-up arrow-up"></a>
@@ -79,19 +81,19 @@ export default class Photographer {
             <button class="dropbtn filter" role="button" data-filter="date">Date</button>
             <a title="Dropdown Menu" href="#"  class="fas fa-chevron-down arrow-down"></a>
             <div class="dropdown-content">
-                <button class="filter" role="listbox" data-filter="populaire">Popularité</button>
+                <button class="filter" role="listbox" aria-activedescendant="popularite" data-filter="populaire">Popularité</button>
                 <button class="filter" role="listbox" data-filter="titre">Titre</button>
             </div>
             <a title="Dropdown Menu" href="#"  class="fas fa-chevron-up arrow-up"></a>
         </div>
         <div class="dropdown" id="titre">
-            <button class="dropbtn filter" role="listbox" data-filter="titre">Titre</button>
+            <button class="dropbtn filter" role="listbox" aria-activedescendant="filtre" data-filter="titre">Titre</button>
             <a title="Dropdown Menu" href="#"  class="fas fa-chevron-down arrow-down"></a>
             <div class="dropdown-content">
                 <button class="filter" role="listbox" data-filter="date">Date</button>
                 <button class="filter" role="listbox" data-filter="populaire">Popularité</button>
             </div>
-            <a title="Dropdown Menu" href="#"  class="fas fa-chevron-up arrow-up"></a>
+            <a title="Dropdown Menu" href="#"  role="button" class="fas fa-chevron-up arrow-up"></a>
         </div>
         `
     }

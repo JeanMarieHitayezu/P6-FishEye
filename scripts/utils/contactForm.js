@@ -36,9 +36,6 @@ function submitForm(e) {
     closeModal();    
 }
 
-
-
-
 document.addEventListener('keydown', function(e) {
   let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
