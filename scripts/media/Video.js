@@ -11,7 +11,7 @@ export default class Video extends Media {
         this.likes = data.likes;
         this.date = data.date;
         this.price = data.price;
-        this.alt = data.alt
+        this.alt = data.alt;
     }
 
     // photographer video details to be continued in portifolio

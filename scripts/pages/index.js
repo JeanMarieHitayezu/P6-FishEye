@@ -17,7 +17,8 @@ async function displayPhotographers() {
 
     return photographers;
     
-};
+}
+
 displayPhotographers();
 
 async function start() {

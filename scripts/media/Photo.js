@@ -12,7 +12,7 @@ export default class Photo extends Media {
         this.likes = data.likes;
         this.date = data.date;
         this.price = data.price;
-        this.alt = data.alt
+        this.alt = data.alt;
     
     }
     built() {
