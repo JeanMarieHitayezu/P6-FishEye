@@ -15,6 +15,8 @@ export default class Photo extends Media {
         this.alt = data.alt;
     
     }
+// Intégration des images dans la page des photographes
+
     built() {
         return `
         <div class="image-wrapper">

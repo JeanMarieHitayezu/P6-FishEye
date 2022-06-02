@@ -1,0 +1,22 @@
+{
+  "name": "p6-fisheye",
+  "version": "1.0.0",
+  "description": "## Démarrer le projet",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix --ext .js,.jsx . "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanMarieHitayezu/P6-FishEye.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeanMarieHitayezu/P6-FishEye/issues"
+  },
+  "homepage": "https://github.com/JeanMarieHitayezu/P6-FishEye#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}

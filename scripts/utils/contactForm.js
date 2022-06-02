@@ -39,7 +39,7 @@ modal.addEventListener("submit", submitForm);
 closeForm.addEventListener("click", closeModal);
 
 // OPEN AND SEND FORM
-displayModal();
+
 function displayModal() {
     modal.style.display = "block";
     modal.setAttribute("aria-hidden", "false");
@@ -56,6 +56,7 @@ function submitForm(e) {
     console.log("Nom : " + lastName.value);
     console.log("Email : " + email.value);
     console.log("Message : " + message.value);
+    displayModal();
     closeModal();    
 }
 

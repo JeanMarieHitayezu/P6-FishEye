@@ -511,6 +511,12 @@ form input {
     #populaire {
         margin: 0 0 -300px 10px; 
     }
+    .photograph-picture {
+        margin-top: 50px;
+        min-width: 130px;
+        min-height: 130px;
+        
+    }
 }
 
 @media (min-width: 801px) and (max-width: 1000px){

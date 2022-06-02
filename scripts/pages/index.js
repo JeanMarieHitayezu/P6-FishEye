@@ -12,7 +12,7 @@ async function displayPhotographers() {
             return photographersData.photographers;
         })
         .catch(function (error) {
-            throw new Error(`getPhotographer api request failed. ${error}.`)
+            throw new Error(`getPhotographer api request failed. ${error}.`);
         });
 
     return photographers;
@@ -21,14 +21,14 @@ async function displayPhotographers() {
 
 displayPhotographers();
 
-async function start() {
+async function init() {
 
     const photographers = await displayPhotographers();
     
     displayData(photographers);
     
 }
-start();
+init();
 
 function displayData(photographers) {
             

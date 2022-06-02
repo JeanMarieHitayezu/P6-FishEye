@@ -66,7 +66,7 @@ export default class Photographer {
     displayDropdown() {
         
         document.getElementById("dropdown-wrapper").innerHTML = `
-        <p id="dropdown-text" aria-label="Trier par">T<strong>rier par</strong></p>
+        <p id="dropdown-text" aria-label="Trier par"><strong>Trier par</strong></p>
         <div class="dropdown" id="populaire">
             <button class="dropbtn filter" role="button" aria-haspopup="listbox" aria-expanded="false" data-filter="populaire">Popularité</button>
             <a title="Dropdown Menu" href="#"  role="button" aria-haspopup="listbox" class="fas fa-chevron-down arrow-down"></a>
@@ -94,7 +94,7 @@ export default class Photographer {
             </div>
             <a title="Dropdown Menu" href="#"  role="button" class="fas fa-chevron-up arrow-up"></a>
         </div>
-        `
+        `;
     }
          
 }

@@ -1,4 +1,4 @@
-import Media from "../media/Media.js"
+import Media from "../media/Media.js";
 
 export default class Video extends Media {
 
@@ -14,7 +14,7 @@ export default class Video extends Media {
         this.alt = data.alt;
     }
 
-    // photographer video details to be continued in portifolio
+    // Intégration des videos dans la page des photographes
     built() {
         return `
         <div class="image-wrapper">
