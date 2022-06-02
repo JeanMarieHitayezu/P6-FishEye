@@ -143,6 +143,9 @@ form input {
     border: none;
     border-radius: 5px;
 }
+#message {
+    height: 150px;
+}
 
 #photographer-works {
     display: grid;
@@ -451,10 +454,6 @@ form input {
     display: none;
 }
 
-#message {
-    height: 150px;
-}
-
 @media screen and (max-width: 800px){
     #photograph-header {
         display: flex;
@@ -498,8 +497,11 @@ form input {
     .modal {
         width: 50%;
     }
+    html {
+        font-size: 14px;
+    }
     .modal-header {
-        font-size: 16px;
+        font-size: 14px;
     }
     .modal header img {
         cursor: pointer;
@@ -512,10 +514,12 @@ form input {
         margin: 0 0 -300px 10px; 
     }
     .photograph-picture {
-        margin-top: 50px;
-        min-width: 130px;
-        min-height: 130px;
-        
+        max-width: 150px;
+        min-height: 50%;
+
+    }
+    .contact_button {
+        margin-left: 50px;
     }
 }
 
@@ -530,16 +534,16 @@ form input {
     #photographer-header {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     #photographer-works {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 70px;   
+        gap: 30px;   
     }
     .photos {
-        min-height: 14rem;
-        min-width: 18rem;
+        min-height: 10rem;
+        min-width: 14rem;
         max-height: 98%;
         max-width: 100%;
     }
@@ -565,8 +569,11 @@ form input {
         margin-left: 350px;
     }
     .photograph-picture {
-        width: 200px;
-        height: 200px;
+        max-width: 150px;
+        max-height: 40%;
+    }
+    .contact_button {
+        margin-left: 50px;
     }
 }
 
@@ -589,6 +596,10 @@ form input {
     .description-wrapper {
         display: flex;
         width: 450px;
+    }
+    .photograph-picture {
+        max-width: 200px;
+        max-height: 60%;
     }
 }
 @media (min-width: 1301px) and (max-width: 1600px){

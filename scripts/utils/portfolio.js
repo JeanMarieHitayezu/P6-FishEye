@@ -18,6 +18,7 @@ export default class Portfolio {
         this.listenForFilter();
     }
     
+    // CODE DES MEDIAS DU PHOTOGRAPHE
     display() {
         let html = " ";
         this.all.forEach(media => {

@@ -1,3 +1,5 @@
+// CODE DE LA PAGE PHOTOGRAPHE
+
 import Photographer from "../factories/photographer.js";
 import Portfolio from "../utils/portfolio.js";
 

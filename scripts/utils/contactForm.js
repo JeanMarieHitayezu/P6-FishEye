@@ -1,4 +1,4 @@
-// DOM ELEMENTS FORM FIELDS VALIDATION
+// DOM ELEMENTS  FOR FORM FIELDS VALIDATION
 let modal = document.getElementById("contact_modal");
 let firstName = document.getElementById("prenom");
 let lastName = document.getElementById("nom");

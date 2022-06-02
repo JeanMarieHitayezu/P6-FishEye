@@ -1,3 +1,5 @@
+// CODE DE LA PAGE D'ACCUEIL
+
 import Photographer from "../factories/photographer.js";
 
 async function displayPhotographers() {

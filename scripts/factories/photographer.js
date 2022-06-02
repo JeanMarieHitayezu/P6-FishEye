@@ -11,6 +11,7 @@ export default class Photographer {
         this.photographerid = data.photographerid;
     }
     
+    // CODE DE LA PAGE D'ACCUEIL
     getUserCardDOM() {
         
         return `
@@ -29,7 +30,8 @@ export default class Photographer {
         </article>
         `;    
     }
-
+    
+    //CODE DE LA PARTIE SUPERIEURE DE LA PAGE PHOTOGRAPHE
     displayHeader() {
 
         document.getElementById("photograph-header").innerHTML = `

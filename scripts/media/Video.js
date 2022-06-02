@@ -14,7 +14,7 @@ export default class Video extends Media {
         this.alt = data.alt;
     }
 
-    // Intégration des videos dans la page des photographes
+    // CODE DES VIDEOS DE LA PAGE PHOTOGRAPHE
     built() {
         return `
         <div class="image-wrapper">
